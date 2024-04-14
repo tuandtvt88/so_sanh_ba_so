@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>CHƯƠNG TRÌNH SO SÁNH 3 SỐ A B C NHẬP TỪ BÀN PHÍM</h2>
+<input type="number" id="a" placeholder="Nhập số a: ">
+<input type="number" id="b" placeholder="Nhập số b: ">
+<input type="number" id="c" placeholder="Nhập số c: ">
+<button onclick="getdata()"> Kết quả</button>
+<p id="kq"></p>
+</body>
+<script>
+    function getdata(){
+        let a =+document.getElementById('a').value;
+        let b =+document.getElementById('b').value;
+        let c =+document.getElementById('c').value;
+
+        if (a > b && a > c){
+            document.getElementById('kq').innerHTML = "a là số lớn nhất";
+        }
+        else if (b > a && b > c) {
+            document.getElementById('kq').innerHTML = "b là số lớn nhất";
+        }
+        else if (c > a && c > b) {
+            document.getElementById('kq').innerHTML = "c là số lớn nhất";
+        }
+        else {
+            document.getElementById('kq').innerHTML = "Có ít nhất hai số bằng nhau";
+        }
+    }
+</script>
+</html>
